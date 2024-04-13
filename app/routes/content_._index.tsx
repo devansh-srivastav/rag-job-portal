@@ -35,7 +35,7 @@ export default function Pics() {
   const actionData = useActionData<typeof action>()
   return (
     <div className="mt-8 flex flex-col">
-      <span className="text-2xl font-semibold">My Content</span>
+      <span className="text-2xl font-semibold">Job Listings</span>
       <Form method="post" className="mt-8 flex flex-row items-center w-full gap-x-2">
         <input
           id="search"
@@ -53,11 +53,22 @@ export default function Pics() {
         .sort((a, b) => (a.xata.createdAt < b.xata.createdAt ? 1 : -1))
         .map((i, _: number) => (
           <Link className="relative mt-8" key={i.slug} to={'/content/' + i.slug}>
-            <div className="max-w-max border border-gray-200 rounded px-3 py-1 bottom-4 left-4 flex flex-row items-center min-h-[20px] gap-x-2 z-20">
-              <Image alt={i.author_name} url={i.author_image_url} width={i.author_image_w} height={i.author_image_h} className="h-[20px] w-[20px] rounded-full" />
-              <span>{i.author_name}</span>
+            <div className="max-w-[800px] border border-gray-200 rounded px-3 py-1 bottom-4 left-4 flex flex-row items-center min-h-[20px] gap-x-10 z-20">
+              <Image alt={i.author_name} url={i.author_image_url} width={i.author_image_w} height={i.author_image_h} className="h-[100px] w-[100px] rounded-full" />
+              <div>
+                <span><strong>{i.title}</strong></span> 
+                <br />
+                <span>{i.author_name}</span> 
+                <br />
+                <span className="text-gray-500">{i.location}</span>
+                <br />
+                <span className="text-gray-500">{i.experience_level} - {i.job_type}</span> 
+                <br />
+                <span className="text-gray-500">Posted On: {new Date(i.xata.createdAt).toLocaleDateString()}</span>
+              </div>
             </div>
-            <Image className="mt-4" alt={i.title} url={i.og_image_url} width={i.og_image_w} height={i.og_image_h} loading={_ === 0 ? 'eager' : 'lazy'} />
+            {/* <span>{i.content && <div className="mt-8 prose" dangerouslySetInnerHTML={{ __html: i.content }} />}</span> */}
+            {/* <Image className="mt-4" alt={i.title} url={i.og_image_url} width={i.og_image_w} height={i.og_image_h} loading={_ === 0 ? 'eager' : 'lazy'} /> */}
           </Link>
         ))}
     </div>

@@ -1,5 +1,5 @@
 {
-  "databaseURL": "https://Rishi-Raj-Jain-s-workspace-80514q.us-east-1.xata.sh/db/remix-wysiwyg-litellm-xata-vercel",
+  "databaseURL": "https://Devansh-Srivastav-s-workspace-e9ef7s.eu-central-1.xata.sh/db/rag",
   "codegen": {
     "output": "app/xata.server.ts"
   }
