@@ -5,7 +5,6 @@ import type {
   SchemaInference,
   XataRecord,
 } from "@xata.io/client";
-
 const tables = [
   {
     name: "uploads",
@@ -19,7 +18,7 @@ const tables = [
       { name: "title", type: "string" },
       { name: "slug", type: "string" },
       { name: "content", type: "text" },
-      { name: "author_name", type: "string" },
+      { name: "company", type: "string" },
       { name: "author_image_url", type: "string" },
       { name: "og_image_url", type: "string" },
       { name: "author_image_w", type: "string" },
@@ -28,6 +27,8 @@ const tables = [
       { name: "og_image_h", type: "string" },
       { name: "location", type: "string" },
       { name: "apply_url", type: "string" },
+      { name: "experience_level", type: "string" },
+      { name: "job_type", type: "string" },
     ],
   },
 ] as const;

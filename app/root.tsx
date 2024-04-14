@@ -22,8 +22,11 @@ const App = () => {
             <Link className="border hover:border-black rounded px-2 py-0.5 text-gray-800 hover:text-black" to="/">
               Home
             </Link>
+            <Link className="border hover:border-black rounded px-2 py-0.5 text-gray-800 hover:text-black" to="/new-job">
+              Post New Job
+            </Link>
             <Link className="border hover:border-black rounded px-2 py-0.5 text-gray-800 hover:text-black" to="/content">
-              View All
+              View All Jobs
             </Link>
           </div>
           {navigation.location?.pathname === '/content' ? <Contents /> : navigation.location?.pathname.includes('/content/') ? <Content /> : <Outlet />}

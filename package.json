@@ -15,6 +15,7 @@
     "@remix-run/react": "^2.3.1",
     "@remix-run/serve": "^2.3.1",
     "@xata.io/client": "^0.28.4",
+    "axios": "^1.6.8",
     "dotenv": "^16.3.1",
     "image-size": "^1.1.0",
     "isbot": "^3.6.8",

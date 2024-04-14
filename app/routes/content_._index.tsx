@@ -20,7 +20,7 @@ export async function action({ request }: ActionFunctionArgs) {
     tables: [
       {
         table: 'content',
-        target: ['content', 'title', 'slug', 'author_name'],
+        target: ['content', 'title', 'slug', 'company'],
       },
     ],
     fuzziness: 2,
@@ -54,11 +54,11 @@ export default function Pics() {
         .map((i, _: number) => (
           <Link className="relative mt-8" key={i.slug} to={'/content/' + i.slug}>
             <div className="max-w-[800px] border border-gray-200 rounded px-3 py-1 bottom-4 left-4 flex flex-row items-center min-h-[20px] gap-x-10 z-20">
-              <Image alt={i.author_name} url={i.author_image_url} width={i.author_image_w} height={i.author_image_h} className="h-[100px] w-[100px] rounded-full" />
+              <Image alt={i.company} url={i.author_image_url} width={i.author_image_w} height={i.author_image_h} className="h-[100px] w-[100px] rounded-full" />
               <div>
                 <span><strong>{i.title}</strong></span> 
                 <br />
-                <span>{i.author_name}</span> 
+                <span>{i.company}</span> 
                 <br />
                 <span className="text-gray-500">{i.location}</span>
                 <br />
