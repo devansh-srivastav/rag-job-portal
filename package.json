@@ -14,6 +14,8 @@
     "@remix-run/node": "^2.3.1",
     "@remix-run/react": "^2.3.1",
     "@remix-run/serve": "^2.3.1",
+    "@vectara/react-chatbot": "^1.0.1",
+    "@vectara/react-search": "^0.0.15",
     "@xata.io/client": "^0.28.4",
     "axios": "^1.6.8",
     "dotenv": "^16.3.1",
