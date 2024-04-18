@@ -28,7 +28,7 @@ const App = () => {
             <Link className="border hover:border-black rounded px-2 py-0.5 text-gray-800 hover:text-black" to="/content">
               View All Jobs
             </Link>
-            <Link className="border hover:border-black rounded px-2 py-0.5 text-gray-800 hover:text-black" to="https://chat-jobmakerspace.vercel.app/">
+            <Link className="border hover:border-black rounded px-2 py-0.5 text-gray-800 hover:text-black" to="https://chat.jobmakerspace.live/">
               Chat
             </Link>
           </div>
